@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Google Analytics Integration Class
+ * Google Trusted Stores Integration Class
  *
  * Allows tracking code to be inserted into store pages.
  *
