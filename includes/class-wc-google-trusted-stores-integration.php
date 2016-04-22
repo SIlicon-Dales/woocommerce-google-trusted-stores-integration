@@ -173,7 +173,7 @@ class WC_Google_Trusted_Stores extends WC_Integration {
 
 			global $product;
 
-			$code .= 'gts.push(["google_base_offer_id", "' . esc_js( $product->id ) . '"]);';
+			$code .= 'gts.push(["google_bbase_offer_id", "woocommerce_gpf_' . esc_js( $product->id ) . '"]);';
 		}
 
 		if ( $this->gts_google_shopping_account_enable === 'yes' && $this->gts_google_shopping_account_id !== '' ) {
@@ -283,7 +283,7 @@ class WC_Google_Trusted_Stores extends WC_Integration {
 					<span class="gts-i-name">' . esc_html( $item['name'] ) . '</span>
 					<span class="gts-i-price">' . esc_html( $order->get_item_subtotal( $item ) ) . '</span>
 					<span class="gts-i-quantity">' . esc_html( $item['qty'] ) . '</span>
-					<span class="gts-i-prodsearch-id">' . esc_html( $item['product_id'] ) . '</span>' .
+					<span class="gts-i-prodsearch-id">woocommerce_gpf_' . esc_html( $item['product_id'] ) . '</span>' .
 					$google_shopping_acct_code .
 				'</span>
 			';
